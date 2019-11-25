@@ -10,25 +10,19 @@
  */
 
 parasails.registerComponent('ajaxButton', {
-  //  ╔═╗╦═╗╔═╗╔═╗╔═╗
-  //  ╠═╝╠╦╝║ ║╠═╝╚═╗
-  //  ╩  ╩╚═╚═╝╩  ╚═╝
+//props
   props: [
     'syncing'
   ],
 
-  //  ╦╔╗╔╦╔╦╗╦╔═╗╦    ╔═╗╔╦╗╔═╗╔╦╗╔═╗
-  //  ║║║║║ ║ ║╠═╣║    ╚═╗ ║ ╠═╣ ║ ║╣
-  //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
+//initial state
   data: function (){
     return {
       //…
     };
   },
 
-  //  ╦ ╦╔╦╗╔╦╗╦
-  //  ╠═╣ ║ ║║║║
-  //  ╩ ╩ ╩ ╩ ╩╩═╝
+  //html
   template: `
   <button @click="click()" type="submit" class="btn ajax-button" :class="[syncing ? 'syncing' : '']">
     <span class="button-text" v-if="!syncing"><slot name="default">Submit</slot></span>
@@ -43,9 +37,7 @@ parasails.registerComponent('ajaxButton', {
   </button>
   `,
 
-  //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
-  //  ║  ║╠╣ ║╣ ║  ╚╦╝║  ║  ║╣
-  //  ╩═╝╩╚  ╚═╝╚═╝ ╩ ╚═╝╩═╝╚═╝
+ //life cycle
   beforeMount: function() {
     //…
   },
@@ -56,9 +48,7 @@ parasails.registerComponent('ajaxButton', {
     //…
   },
 
-  //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-  //  ║║║║ ║ ║╣ ╠╦╝╠═╣║   ║ ║║ ║║║║╚═╗
-  //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
+ //methods
   methods: {
 
     click: async function(){

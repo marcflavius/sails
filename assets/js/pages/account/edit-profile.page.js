@@ -1,7 +1,5 @@
 parasails.registerPage('edit-profile', {
-  //  ╦╔╗╔╦╔╦╗╦╔═╗╦    ╔═╗╔╦╗╔═╗╔╦╗╔═╗
-  //  ║║║║║ ║ ║╠═╣║    ╚═╗ ║ ╠═╣ ║ ║╣
-  //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
+//initial state
   data: {
     // Main syncing/loading state for this page.
     syncing: false,
@@ -17,9 +15,7 @@ parasails.registerPage('edit-profile', {
     cloudError: '',
   },
 
-  //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
-  //  ║  ║╠╣ ║╣ ║  ╚╦╝║  ║  ║╣
-  //  ╩═╝╩╚  ╚═╝╚═╝ ╩ ╚═╝╩═╝╚═╝
+ //life cycle
   beforeMount: function() {
     // Attach raw data exposed by the server.
     _.extend(this, SAILS_LOCALS);
@@ -32,9 +28,7 @@ parasails.registerPage('edit-profile', {
     //…
   },
 
-  //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-  //  ║║║║ ║ ║╣ ╠╦╝╠═╣║   ║ ║║ ║║║║╚═╗
-  //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
+ //methods
   methods: {
 
     submittedForm: async function() {

@@ -1,7 +1,5 @@
 parasails.registerPage('account-overview', {
-  //  ╦╔╗╔╦╔╦╗╦╔═╗╦    ╔═╗╔╦╗╔═╗╔╦╗╔═╗
-  //  ║║║║║ ║ ║╠═╣║    ╚═╗ ║ ╠═╣ ║ ║╣
-  //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
+//initial state
   data: {
     isBillingEnabled: false,
 
@@ -25,9 +23,7 @@ parasails.registerPage('account-overview', {
     removeCardModalVisible: false,
   },
 
-  //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
-  //  ║  ║╠╣ ║╣ ║  ╚╦╝║  ║  ║╣
-  //  ╩═╝╩╚  ╚═╝╚═╝ ╩ ╚═╝╩═╝╚═╝
+ //life cycle
   beforeMount: function (){
     _.extend(this, window.SAILS_LOCALS);
 
@@ -45,9 +41,7 @@ parasails.registerPage('account-overview', {
     //…
   },
 
-  //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-  //  ║║║║ ║ ║╣ ╠╦╝╠═╣║   ║ ║║ ║║║║╚═╗
-  //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
+ //methods
   methods: {
 
     clickStripeCheckoutButton: async function() {

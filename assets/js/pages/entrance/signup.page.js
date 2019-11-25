@@ -1,7 +1,5 @@
 parasails.registerPage('signup', {
-  //  ╦╔╗╔╦╔╦╗╦╔═╗╦    ╔═╗╔╦╗╔═╗╔╦╗╔═╗
-  //  ║║║║║ ║ ║╠═╣║    ╚═╗ ║ ╠═╣ ║ ║╣
-  //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
+//initial state
   data: {
     // Form data
     formData: { /* … */ },
@@ -20,9 +18,7 @@ parasails.registerPage('signup', {
     cloudSuccess: false,
   },
 
-  //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
-  //  ║  ║╠╣ ║╣ ║  ╚╦╝║  ║  ║╣
-  //  ╩═╝╩╚  ╚═╝╚═╝ ╩ ╚═╝╩═╝╚═╝
+ //life cycle
   beforeMount: function() {
     // Attach any initial data from the server.
     _.extend(this, SAILS_LOCALS);
@@ -31,9 +27,7 @@ parasails.registerPage('signup', {
     //…
   },
 
-  //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-  //  ║║║║ ║ ║╣ ╠╦╝╠═╣║   ║ ║║ ║║║║╚═╗
-  //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
+ //methods
   methods: {
 
     submittedForm: async function() {

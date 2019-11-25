@@ -1,14 +1,10 @@
 parasails.registerPage('[id="498"]', {
-  //  ╦╔╗╔╦╔╦╗╦╔═╗╦    ╔═╗╔╦╗╔═╗╔╦╗╔═╗
-  //  ║║║║║ ║ ║╠═╣║    ╚═╗ ║ ╠═╣ ║ ║╣
-  //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
+//initial state
   data: {
     //…
   },
 
-  //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
-  //  ║  ║╠╣ ║╣ ║  ╚╦╝║  ║  ║╣
-  //  ╩═╝╩╚  ╚═╝╚═╝ ╩ ╚═╝╩═╝╚═╝
+ //life cycle
   beforeMount: function() {
     // Attach any initial data from the server.
     _.extend(this, SAILS_LOCALS);
@@ -17,9 +13,7 @@ parasails.registerPage('[id="498"]', {
     //…
   },
 
-  //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-  //  ║║║║ ║ ║╣ ╠╦╝╠═╣║   ║ ║║ ║║║║╚═╗
-  //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
+ //methods
   methods: {
     //…
   }

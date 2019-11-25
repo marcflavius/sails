@@ -40,7 +40,7 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
   sockets: Object.assign({}, PRODUCTION_CONFIG.sockets, {
 
     onlyAllowOrigins: [
-      'http://localhost:1337',
+      'http://sails-starter.test/',
       'http://localhost:3000',
       // 'https://example-staging.herokuapp.com',
       // 'http://example-staging.herokuapp.com',

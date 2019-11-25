@@ -18,9 +18,7 @@
  */
 
 parasails.registerComponent('ajaxForm', {
-  //  ╔═╗╦═╗╔═╗╔═╗╔═╗
-  //  ╠═╝╠╦╝║ ║╠═╝╚═╗
-  //  ╩  ╩╚═╚═╝╩  ╚═╝
+//props
   // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   // Note:
   // Some of these props rely on the `.sync` modifier re-introduced in Vue 2.3.x.
@@ -38,27 +36,21 @@ parasails.registerComponent('ajaxForm', {
     'handleParsing',// « alternative for `formRules`+`formData`+`formErrors`
   ],
 
-  //  ╦╔╗╔╦╔╦╗╦╔═╗╦    ╔═╗╔╦╗╔═╗╔╦╗╔═╗
-  //  ║║║║║ ║ ║╠═╣║    ╚═╗ ║ ╠═╣ ║ ║╣
-  //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
+//initial state
   data: function (){
     return {
       //…
     };
   },
 
-  //  ╦ ╦╔╦╗╔╦╗╦
-  //  ╠═╣ ║ ║║║║
-  //  ╩ ╩ ╩ ╩ ╩╩═╝
+  //html
   template: `
   <form class="ajax-form" @submit.prevent="submit()" @keydown.meta.enter="keydownMetaEnter()">
     <slot name="default"></slot>
   </form>
   `,
 
-  //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
-  //  ║  ║╠╣ ║╣ ║  ╚╦╝║  ║  ║╣
-  //  ╩═╝╩╚  ╚═╝╚═╝ ╩ ╚═╝╩═╝╚═╝
+ //life cycle
   beforeMount: function() {
     //…
   },
@@ -135,9 +127,7 @@ parasails.registerComponent('ajaxForm', {
     //…
   },
 
-  //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-  //  ║║║║ ║ ║╣ ╠╦╝╠═╣║   ║ ║║ ║║║║╚═╗
-  //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
+ //methods
   methods: {
 
     keydownMetaEnter: async function() {

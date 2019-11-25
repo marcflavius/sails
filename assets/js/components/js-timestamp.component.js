@@ -14,18 +14,14 @@
 
 parasails.registerComponent('jsTimestamp', {
 
-  //  ╔═╗╦═╗╔═╗╔═╗╔═╗
-  //  ╠═╝╠╦╝║ ║╠═╝╚═╗
-  //  ╩  ╩╚═╚═╝╩  ╚═╝
+//props
   props: [
     'at',// « The JS timestamp to format
     'short',// « Whether to shorten the formatted date by not including the time of day (may only be used with timeago, and even then only applicable in certain situations)
     'format',// « one of: 'calendar', 'timeago' (defaults to 'timeago'.  Otherwise, the "calendar" format displays data as US-style calendar dates with a four-character year, separated by dashes.  In other words: "MM-DD-YYYY")
   ],
 
-  //  ╦╔╗╔╦╔╦╗╦╔═╗╦    ╔═╗╔╦╗╔═╗╔╦╗╔═╗
-  //  ║║║║║ ║ ║╠═╣║    ╚═╗ ║ ╠═╣ ║ ║╣
-  //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
+//initial state
   data: function (){
     return {
       formatType: undefined,
@@ -34,16 +30,12 @@ parasails.registerComponent('jsTimestamp', {
     };
   },
 
-  //  ╦ ╦╔╦╗╔╦╗╦
-  //  ╠═╣ ║ ║║║║
-  //  ╩ ╩ ╩ ╩ ╩╩═╝
+  //html
   template: `
   <span>{{formattedTimestamp}}</span>
   `,
 
-  //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
-  //  ║  ║╠╣ ║╣ ║  ╚╦╝║  ║  ║╣
-  //  ╩═╝╩╚  ╚═╝╚═╝ ╩ ╚═╝╩═╝╚═╝
+ //life cycle
   beforeMount: function() {
     if (this.at === undefined) {
       throw new Error('Incomplete usage of <js-timestamp>:  Please specify `at` as a JS timestamp (i.e. epoch ms, a number).  For example: `<js-timestamp :at="something.createdAt">`');
@@ -99,9 +91,7 @@ parasails.registerComponent('jsTimestamp', {
   },
 
 
-  //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-  //  ║║║║ ║ ║╣ ╠╦╝╠═╣║   ║ ║║ ║║║║╚═╗
-  //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
+ //methods
   methods: {
 
     _formatTimeago: function() {

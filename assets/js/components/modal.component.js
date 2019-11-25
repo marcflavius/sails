@@ -17,16 +17,12 @@
  */
 
 parasails.registerComponent('modal', {
-  //  ╔═╗╦═╗╔═╗╔═╗╔═╗
-  //  ╠═╝╠╦╝║ ║╠═╝╚═╗
-  //  ╩  ╩╚═╚═╝╩  ╚═╝
+//props
   props: [
     //…
   ],
 
-  //  ╦╔╗╔╦╔╦╗╦╔═╗╦    ╔═╗╔╦╗╔═╗╔╦╗╔═╗
-  //  ║║║║║ ║ ║╠═╣║    ╚═╗ ║ ╠═╣ ║ ║╣
-  //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
+//initial state
   data: function (){
     return {
       // Spinlock used for preventing trying to close the bootstrap modal more than once.
@@ -39,9 +35,7 @@ parasails.registerComponent('modal', {
     };
   },
 
-  //  ╦ ╦╔╦╗╔╦╗╦
-  //  ╠═╣ ║ ║║║║
-  //  ╩ ╩ ╩ ╩ ╩╩═╝
+  //html
   template: `
   <transition name="modal" v-on:leave="leave" v-bind:css="false">
     <div class="modal fade" tabindex="-1" role="dialog">
@@ -55,9 +49,7 @@ parasails.registerComponent('modal', {
   </transition>
   `,
 
-  //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
-  //  ║  ║╠╣ ║╣ ║  ╚╦╝║  ║  ║╣
-  //  ╩═╝╩╚  ╚═╝╚═╝ ╩ ╚═╝╩═╝╚═╝
+ //life cycle
   beforeMount: function() {
     // If this is mobile safari, make note of it.
     this.isMobileSafari = (typeof bowser !== 'undefined') && bowser.mobile && bowser.safari;
@@ -177,9 +169,7 @@ parasails.registerComponent('modal', {
   // ^Note that there is no `beforeDestroy()` lifecycle callback in this
   // component. This is on purpose, since the timing vs. `leave()` gets tricky.
 
-  //  ╦╔╗╔╔╦╗╔═╗╦═╗╔═╗╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-  //  ║║║║ ║ ║╣ ╠╦╝╠═╣║   ║ ║║ ║║║║╚═╗
-  //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
+ //methods
   methods: {
 
     leave: function (el, done) {
