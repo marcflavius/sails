@@ -16,14 +16,18 @@
     "sails-mongo": "^1.0.1"
   },
   "devDependencies": {
+    "connect-livereload": "^0.6.1",
     "eslint": "5.16.0",
+    "grunt": "1.0.4",
+    "grunt-browser-sync": "^2.2.0",
     "htmlhint": "0.11.0",
     "lesshint": "6.3.6",
-    "grunt": "1.0.4",
+    "sails-hook-autoreload": "^1.1.0",
     "sails-hook-grunt": "^4.0.0"
   },
   "scripts": {
-    "start": "NODE_ENV=production node app.js",
+    "start": "nodemon --exec 'lsof -ti:1337 &>/dev/null | xargs -I {} kill {} && sails lift' -e 'js' -w 'views/pages/'",
+    "prod": "NODE_ENV=production node app.js",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look so good.' && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/**/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/**/**/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/**/**/**/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/**/**/**/**/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/**/**/**/**/**/*.ejs && echo '✔  So do your .ejs files.' && ./node_modules/lesshint/bin/lesshint assets/styles/ --max-warnings=0 && echo '✔  Your .less files look good, too.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo",

@@ -48,7 +48,11 @@ module.exports = {
     ***************************************************************************/
     default: {
       adapter: 'sails-mongo',
-      url: 'mysql://user:password@host:port/database',
+      host: 'localhost',
+      port: '27017',
+      database:'ort'
+
+      // url: 'mysql://user:password@host:port/database',
       //--------------------------------------------------------------------------
       //  /\   To avoid checking it in to version control, you might opt to set
       //  ||   sensitive credentials like `url` using an environment variable.

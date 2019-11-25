@@ -28,17 +28,25 @@ module.exports.http = {
     * (This Sails app's routes are handled by the "router" middleware below.)  *
     *                                                                          *
     ***************************************************************************/
+    connectLivereload: function (req, res, next) {
+      if (sails.config.environment !== 'production')
+        require('connect-livereload')({
+          port: 54092
+        })(req, res, next);
+      else return next();
+    },
 
-    // order: [
-    //   'cookieParser',
-    //   'session',
-    //   'bodyParser',
-    //   'compress',
-    //   'poweredBy',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    // ],
+    order: [
+    'connectLivereload',
+      'cookieParser',
+      'session',
+      'bodyParser',
+      // 'compress',
+      // 'poweredBy',
+      // 'router',
+      'www',
+      'favicon',
+    ],
 
 
     /***************************************************************************

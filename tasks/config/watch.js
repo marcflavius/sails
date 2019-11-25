@@ -13,7 +13,6 @@ module.exports = function(grunt) {
 
   grunt.config.set('watch', {
     assets: {
-
       // Assets to watch:
       files: [
         'assets/**/*',
