@@ -79,8 +79,9 @@ module.exports.custom = {
   * (https://dashboard.stripe.com/account/apikeys)                          *
   *                                                                         *
   **************************************************************************/
-  // stripePublishableKey: 'pk_test_Zzd814nldl91104qor5911gjald',
-  // stripeSecret: 'sk_test_Zzd814nldl91104qor5911gjald',
+  stripePublishableKey: 'pk_test_jXXlIwpqO06IZLA1dWkfh8fa',
+  stripeSecret: 'sk_test_XYWFeU2lSLP3s4GHdZ13IoaS',
+  enableBillingFeatures: true
   //--------------------------------------------------------------------------
   // /\  Configure these to enable support for billing features.
   // ||  (Or if you don't need billing, feel free to remove them.)

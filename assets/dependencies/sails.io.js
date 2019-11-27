@@ -926,7 +926,6 @@ return new(b[["Active"].concat("Object").join("X")])("Microsoft.XMLHTTP")}catch(
           consolog('in your app.');
           consolog('More info: https://sailsjs.com/config/sockets');
           consolog('For help: https://sailsjs.com/support');
-          consolog('');
           consolog('Technical details:');
           consolog(err);
           consolog('====================================');
