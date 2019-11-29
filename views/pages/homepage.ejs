@@ -12,8 +12,7 @@
   	<button type="submit" class="btn btn-primary">Submit</button>
   </form>
   <ul class="list-group">
-    <li v-for="thing in things" class="list-group-item">{{thing.label}}</li>
+    <li @click="removeThingItem(thing.id)" v-for="thing in things" class="list-group-item">{{thing.label}}</li>
   </ul>
-  <button @click="click(1)" class="btn btn-success">Submit</button>
 </div>
 <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>

@@ -9,13 +9,19 @@ parasails.registerPage('homepage', {
     _.extend(this, SAILS_LOCALS);
   },
   mounted: async function () {
-    console.log("^^^^^^^^^^^^^^^\n "+"^ [homepage.page]",this.things )
+
   },
 
   //methods
   methods: {
-    click() {
-      console.log('click');
+    click(id){
+      alert(id);
+    },
+    async removeThingItem(id) {
+      this.click(id);
+      await Cloud.destroyOneThing.with({id});
+      _.remove(this.things, {id});
+      this.$forceUpdate();
     },
   },
 });
