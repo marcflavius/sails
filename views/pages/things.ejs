@@ -1,4 +1,4 @@
-<div id="homepage" v-cloak>
+<div id="things" v-cloak>
   <form action="" method="POST" role="form">
     <legend>Form Title</legend>
 
@@ -6,10 +6,7 @@
       <label for=""></label>
       <input type="text" class="form-control" name="" id="" placeholder="Input...">
     </div>
-
-
-
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button @click="addOneThing()" type="submit" class="btn btn-primary">Submit</button>
   </form>
   <ul class="list-group">
     <li @click="removeThingItem(thing.id)" v-for="thing in things" class="list-group-item">{{thing.label}}</li>

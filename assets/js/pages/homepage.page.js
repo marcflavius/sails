@@ -9,19 +9,9 @@ parasails.registerPage('homepage', {
     _.extend(this, SAILS_LOCALS);
   },
   mounted: async function () {
-
   },
 
   //methods
   methods: {
-    click(id){
-      alert(id);
-    },
-    async removeThingItem(id) {
-      this.click(id);
-      await Cloud.destroyOneThing.with({id});
-      _.remove(this.things, {id});
-      this.$forceUpdate();
-    },
   },
 });

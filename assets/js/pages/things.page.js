@@ -14,6 +14,7 @@ parasails.registerPage('things', {
     _.extend(this, SAILS_LOCALS);
   },
   mounted: async function() {
+    alert('things.page');
     //…
   },
 
@@ -21,6 +22,19 @@ parasails.registerPage('things', {
   //  ║║║║ ║ ║╣ ╠╦╝╠═╣║   ║ ║║ ║║║║╚═╗
   //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
   methods: {
-    //…
+    click(e){
+      e.preventDefault();
+      alert('ok');
+    },
+    async addOneThing(id) {
+      await Cloud.destroyOneThing.with({id});
+      _.remove(this.things, {id});
+      this.$forceUpdate();
+    },
+    async removeThingItem(id) {
+      await Cloud.destroyOneThing.with({id});
+      _.remove(this.things, {id});
+      this.$forceUpdate();
+    },
   }
 });
