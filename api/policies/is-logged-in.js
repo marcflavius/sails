@@ -1,4 +1,4 @@
-/**
+ /**
  * is-logged-in
  *
  * A simple policy that allows any request from an authenticated user.

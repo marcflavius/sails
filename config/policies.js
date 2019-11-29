@@ -11,7 +11,7 @@
 module.exports.policies = {
 
   // TODO: Marc Flavius - App not secure, turn on policy in production
-  // '*': 'is-logged-in',
+  '*': 'is-logged-in',
 
   // Bypass the `is-logged-in` policy for:
   'entrance/*': true,

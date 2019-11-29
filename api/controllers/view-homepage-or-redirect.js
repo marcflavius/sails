@@ -20,16 +20,10 @@ module.exports = {
   },
 
   fn: async function () {
-    //backend
-    let things = await Thing.find();
-
     if (this.req.me) {
       throw {redirect: '/welcome'};
     }
-
-
-    return {things};
-
+    return {};
   },
 
 };
