@@ -11,11 +11,23 @@ module.exports = {
     },
   },
 
-  exits: {},
+  exits: {
+    forbidden: {
+      description: 'throw an error when wrong user try to remove on owned thing',
+      // responseType:'forbidden'
+    },
+  },
 
   fn: async function (input) {
 
-    await Thing.destroy({id:input.id});
+    const thing = await Thing.findOne({
+      id: input.id
+    });
+
+    if (thing.id === this.req.me.id) {
+      throw 'forbidden';
+    }
+    await Thing.destroy({id: input.id});
     // All done.
     return;
 

@@ -55,7 +55,7 @@ module.exports.models = {
   // safe:	never auto-migrate my database(s). I will do it myself, by hand.
   // alter:	auto-migrate columns/fields, but attempt to keep my existing data (experimental)
   // drop:	wipe/drop ALL my data and rebuild models every time I lift Sails
-  migrate: 'alter',
+  migrate: 'drop',
 
 
   /***************************************************************************

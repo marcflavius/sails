@@ -26,7 +26,7 @@
     "sails-hook-grunt": "^4.0.0"
   },
   "scripts": {
-    "start": "mongod &>/dev/null & nodemon --exec 'lsof -ti:1337 &>/dev/null | xargs -I {} kill {} && sails lift --redis' -e 'js ejs' -w 'views/pages/' -w 'config'",
+    "start": "mongod &>/dev/null & lsof -ti:1338 &>/dev/null | xargs -I {} kill {} && nodemon --exec 'sails lift --port 1338 --redis' -e 'js ejs' -w 'views/pages/' -w 'config'",
     "prod": "NODE_ENV=production node app.js",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "./node_modules/eslint/bin/eslint.js . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look so good.' && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/**/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/**/**/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/**/**/**/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/**/**/**/**/*.ejs && ./node_modules/htmlhint/bin/htmlhint -c ./.htmlhintrc views/**/**/**/**/**/**/*.ejs && echo '✔  So do your .ejs files.' && ./node_modules/lesshint/bin/lesshint assets/styles/ --max-warnings=0 && echo '✔  Your .less files look good, too.'",
