@@ -1,0 +1,6 @@
+<div id="app"></div>
+<% if (sails.config.environment === 'development') { %>
+  <script src="http://localhost:1338/dist/bundle.js"></script>
+<% } else { %>
+  <script src="<%= bundle %>"></script>
+<% } %>

@@ -10,7 +10,7 @@
  * For example:
  *   => `node app.js`
  *   => `npm start`
- *   => `forever start app.js`
+ *   => `forever stqart app.js`
  *   => `node debug app.js`
  *
  * The same command-line arguments and env vars are supported, e.g.:

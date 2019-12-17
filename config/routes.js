@@ -15,11 +15,11 @@ module.exports.routes = {
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
 
   //things
-  'GET /things':             { action: 'view-things' },
+  'GET /things':                { action: 'view-things' },
   'POST /api/v1/add-one-thing': { action: 'add-one-thing' },
 
-
-  'GET /':                   { action: 'view-homepage-or-redirect' },
+  'GET /':                  {controller: 'AppController', action: 'index', skipAssets: true,},
+  // 'GET /':                   { action: 'view-homepage-or-redirect' },
   'GET /welcome/:unused?':   { action: 'dashboard/view-welcome' },
 
   'GET /faq':                { action:   'view-faq' },

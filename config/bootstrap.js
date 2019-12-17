@@ -107,4 +107,5 @@ module.exports.bootstrap = async function () {
                  '\n\n(Proceeding anyway this time...)');
              });
   sails.log('Server start at:', 'http://sails-starter.test/');
+  sails.log('Server start at:', 'http://localhost:1338');
 };
