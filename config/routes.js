@@ -18,7 +18,7 @@ module.exports.routes = {
   'GET /things':                { action: 'view-things' },
   'POST /api/v1/add-one-thing': { action: 'add-one-thing' },
 
-  'GET /':                  {controller: 'AppController', action: 'index', skipAssets: true,},
+  'GET /app/*':                  {controller: 'AppController', action: 'index', skipAssets: true,},
   // 'GET /':                   { action: 'view-homepage-or-redirect' },
   'GET /welcome/:unused?':   { action: 'dashboard/view-welcome' },
 

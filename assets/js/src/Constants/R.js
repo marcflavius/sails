@@ -1,0 +1,16 @@
+export default {
+	publicState: {
+		examState: {
+			EXAM_STATE_UPDATE: 'EXAM_STATE_UPDATE'
+		}
+	},
+	adminState: {
+		exams: {
+			EXAM_ADD_NEW_GROUP: 'EXAM_ADD_NEW_GROUP',
+			DELETE_QUESTION: 'DELETE_QUESTION',
+			CREATE_NEW_QUESTION: 'CREATE_NEW_QUESTION',
+			CREATE_EXAM: 'CREATE_EXAM',
+			DELETE_EXAM: 'ADMIN_DELETE_EXAM'
+		}
+	}
+}

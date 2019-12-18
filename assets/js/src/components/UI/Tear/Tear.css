@@ -1,0 +1,62 @@
+.bounce-up {
+    animation: bounce 300ms infinite alternate;
+    -webkit-animation: bounce 300ms infinite alternate;
+}
+.bounce-left {
+    animation: bounceLeft 300ms infinite alternate;
+    -webkit-animation: bounceLeft 300ms infinite alternate;
+}
+
+.tear {
+
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 3em;
+    height: 3em;
+    border: none;
+    -webkit-border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+    font: normal 100%/normal Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: #1abc9c;
+}
+
+.tear-up {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.tear-down {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.tear-left {
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.tear-right {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+@keyframes bounceLeft {
+    from {
+        transform: translateX(-15px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}

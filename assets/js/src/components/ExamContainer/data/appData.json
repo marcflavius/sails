@@ -1,0 +1,264 @@
+[
+  {
+    "id": "1",
+    "inputType": "text",
+    "image": "",
+    "text": "",
+    "questionStatment": "Complétez les séries suivantes :",
+    "answerList": [
+      {
+        "id": "1",
+        "question": "Y – Z – A – B – C – D - ?",
+        "answer": "",
+        "goodAnswer": "E"
+      },
+      {
+        "id": "2",
+        "question": "Q – R – T – W – A – F - ?",
+        "answer": "",
+        "goodAnswer": "K"
+      },
+      {
+        "question": "F – E – D – C – B – A - ?",
+        "answer": "",
+        "goodAnswer": "Z",
+        "id": "3"
+      },
+      {
+        "question": "53 – 76 – 99 – 122 – 145 - ?",
+        "answer": "",
+        "goodAnswer": "168",
+        "id": "4"
+      },
+      {
+        "question": "27 – 9 – 36 – 45 – 81 - ?",
+        "answer": "",
+        "goodAnswer": "18",
+        "id": "5"
+      }
+    ],
+    "groupTitle": "Raisonnement logique"
+  },
+  {
+    "id": "2",
+    "inputType": "text",
+    "image": "images/domino.png",
+    "text": "",
+    "questionStatment": "Quel est le domino manquant ?",
+    "answerList": [
+      {
+        "question": "Combinaison du domino",
+        "answer": "",
+        "goodAnswer": "5",
+        "id": "1"
+      },
+      {
+        "question": "",
+        "answer": "",
+        "goodAnswer": "2",
+        "id": "2"
+      }
+    ],
+    "groupTitle": "Raisonnement logique"
+  },
+  {
+    "id": "3",
+    "inputType": "text",
+    "image": "images/domino2.png",
+    "text": "",
+    "questionStatment": "Quel est le domino manquant ?",
+    "answerList": [
+      {
+        "question": "Combinaison du domino",
+        "answer": "",
+        "goodAnswer": "1",
+        "id": "1"
+      },
+      {
+        "question": "",
+        "answer": "",
+        "goodAnswer": "4",
+        "id": "2"
+      }
+    ],
+    "groupTitle": "Raisonnement logique"
+  },
+  {
+    "id": "4",
+    "inputType": "text",
+    "image": "images/domino3.png",
+    "text": "",
+    "questionStatment": "Quelle est la carte manquante ?",
+    "answerList": [
+      {
+        "question": "valeur",
+        "answer": "",
+        "goodAnswer": "5",
+        "id": "1"
+      },
+      {
+        "question": "couleur",
+        "answer": "",
+        "goodAnswer": "rouge",
+        "id": "2"
+      }
+    ],
+    "groupTitle": "Raisonnement logique"
+  },
+  {
+    "id": "5",
+    "inputType": "text",
+    "image": "images/domino4.png",
+    "text": "",
+    "questionStatment": "Quelle est la carte manquante ?",
+    "answerList": [
+      {
+        "question": "valeur",
+        "answer": "",
+        "goodAnswer": "8",
+        "id": "1"
+      },
+      {
+        "question": "couleur",
+        "answer": "",
+        "goodAnswer": "noir",
+        "id": "1"
+      }
+    ],
+    "groupTitle": "Raisonnement logique"
+  },
+  {
+    "id": "33",
+    "inputType": "checkbox",
+    "image": "",
+    "text": "",
+    "questionStatment": "A l’entrée au collège, l’enfant a normalement :",
+    "answerList": [
+      {
+        "question": "a) 9 ans",
+        "answer": "",
+        "goodAnswer": "false",
+        "id": "1"
+      },
+      {
+        "question": "b) 11 ans",
+        "answer": "",
+        "goodAnswer": "false",
+        "id": "2"
+      },
+      {
+        "question": "c) 10 ans",
+        "answer": "",
+        "goodAnswer": "true",
+        "id": "3"
+      }
+    ],
+    "groupTitle": "Grammaire et Orthographe"
+  },
+  {
+    "id": "34",
+    "inputType": "checkbox",
+    "image": "",
+    "text": "",
+    "questionStatment": "Les spécialités du « bac » sont choisies en classe de :",
+    "answerList": [
+      {
+        "question": "a) Seconde",
+        "answer": "",
+        "goodAnswer": "false",
+        "id": "1"
+      },
+      {
+        "question": "b) Première",
+        "answer": "",
+        "goodAnswer": "true",
+        "id": "2"
+      },
+      {
+        "question": "c) Terminale",
+        "answer": "",
+        "goodAnswer": "false",
+        "id": "3"
+      }
+    ],
+    "groupTitle": "Grammaire et Orthographe"
+  },
+  {
+    "id": "35",
+    "inputType": "checkbox",
+    "image": "",
+    "text": "",
+    "questionStatment": "Le CP est une :",
+    "answerList": [
+      {
+        "question": "a) Classe préparatoire",
+        "answer": "",
+        "goodAnswer": "true",
+        "id": "1"
+      },
+      {
+        "question": "b) Classe particulière",
+        "answer": "",
+        "goodAnswer": "false",
+        "id": "2"
+      },
+      {
+        "question": "c) Classe provisoire",
+        "answer": "",
+        "goodAnswer": "false",
+        "id": "3"
+      }
+    ],
+    "groupTitle": "Grammaire et Orthographe"
+  },
+  {
+    "id": "36",
+    "inputType": "checkbox",
+    "image": "",
+    "text": "",
+    "questionStatment": "Sans le bac, l’entrée à l’université est :",
+    "answerList": [
+      {
+        "question": "a) Impossible",
+        "answer": "",
+        "goodAnswer": "true",
+        "id": "1"
+      },
+      {
+        "question": "b) Possible",
+        "answer": "",
+        "goodAnswer": "false",
+        "id": "2"
+      }
+    ],
+    "groupTitle": "Grammaire et Orthographe"
+  },
+  {
+    "id": "37",
+    "inputType": "checkbox",
+    "image": "",
+    "text": "",
+    "questionStatment": "8 + 56 – 25 + 4 = ?",
+    "answerList": [
+      {
+        "question": "a) 58",
+        "answer": "",
+        "goodAnswer": "false",
+        "id": "1"
+      },
+      {
+        "question": "b) 42",
+        "answer": "",
+        "goodAnswer": "false",
+        "id": "2"
+      },
+      {
+        "question": "c) 43",
+        "answer": "",
+        "goodAnswer": "true",
+        "id": "3"
+      }
+    ],
+    "groupTitle": "Mathématiques"
+  }
+]

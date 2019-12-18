@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  mode:'development',
+  mode: 'development',
   entry: './assets/main.js',
   output: {
     filename: 'bundle.js',
@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         use: [
           {loader: 'style-loader'}, {loader: 'css-loader?sourceMap'}, {loader: 'sass-loader?sourceMap'}
         ]
@@ -25,13 +25,8 @@ module.exports = {
         test: /\.(jsx|js)?$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                '@babel/preset-env', '@babel/preset-react'
-              ]   // must set the preset, define the compile compatibility eg: firefox, ie9
-            }
+            {
+            loader: 'babel-loader'
           }
         ],
         include: path.join(__dirname, 'assets')
