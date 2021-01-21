@@ -20,7 +20,7 @@
     "grommet-icons": "^4.3.0",
     "history": "^4.10.1",
     "httpster": "^1.0.4",
-    "immer": "2.1.5",
+    "immer": "8.0.1",
     "include-all": "~0.1.6",
     "isomorphic-fetch": "2.2.1",
     "jest": "^24.9.0",
